@@ -1,0 +1,44 @@
+"The account user profile"
+type User {
+	"Unique identifier for the user, in the form of a universally unique identifier (UUID)"
+	id: ID!
+	"The email address associated with the user's account"
+	email: String!
+	"The user's first name"
+	firstName: String!
+	"The user's last name"
+	lastName: String!
+	"The user's handle or username, used for identifying the user within the application"
+	username: String!
+	"Short bio or description of the user"
+	description: String
+}
+
+type Message {
+	id: ID!
+	message: String!
+}
+
+"UserInput allows us to filter users by their ID or username"
+input UserInput {
+	"Unique identifier for the user, in the form of a universally unique identifier (UUID)"
+	id: ID
+	"The user's handle or username, used for identifying the user within the application"
+	username: String
+}
+
+type Query {
+	viewer: User!
+	user(input: UserInput!): User
+	messages: [Message]
+}
+
+type Mutation {
+	createMessage(message: String!): Message!
+	emailUserAuthChallenge(email: String!): Boolean!
+	emailUserAuthTokenChallenge(email: String!, token: String!): Boolean!
+}
+
+type Subscription {
+	messageCreated: Message!
+}

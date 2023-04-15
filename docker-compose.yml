@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+  api:
+    container_name: alia_api
+    platform: linux/amd64
+    build: .
+    depends_on:
+      - alia-redis
+    ports:
+      - "8080:8080"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+      - REDIS_URL=alia_redis:6379
+    networks:
+      - alia_network
+    tty: true
+  alia-redis:
+    container_name: alia_redis
+    image: redis:7.0.5
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - alia_network      
+    tty: true
+networks:
+  alia_network:
+    driver: bridge
+volumes:
+  redis_data:
+    driver: local
