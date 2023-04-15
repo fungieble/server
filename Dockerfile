@@ -8,13 +8,13 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /cmd/alia/main cmd/alia/main.go
+RUN go build -o /cmd/fungie/main cmd/fungie/main.go
 
 FROM alpine
 
 WORKDIR /app
 
-COPY --from=base /cmd/alia/main /app/
+COPY --from=base /cmd/fungie/main /app/
 
 RUN chmod +x ./main
 

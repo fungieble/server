@@ -7,7 +7,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/aliadotsh/alia/internal/graph/models"
+	"github.com/fungiedotsh/fungie/internal/graph/models"
 	"github.com/go-redis/redis"
 )
 

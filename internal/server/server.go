@@ -10,8 +10,8 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler/transport"
 	"github.com/gorilla/websocket"
 
-	"github.com/aliadotsh/alia/internal/graph"
-	"github.com/aliadotsh/alia/internal/graph/generated"
+	"github.com/fungiedotsh/fungie/internal/graph"
+	"github.com/fungiedotsh/fungie/internal/graph/generated"
 )
 
 func NewGQLServer(resolver *graph.Resolver) *handler.Server {

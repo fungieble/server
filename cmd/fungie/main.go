@@ -6,12 +6,12 @@ import (
 	"log"
 	"time"
 
-	"github.com/aliadotsh/alia/internal/datastore"
-	"github.com/aliadotsh/alia/internal/graph"
-	"github.com/aliadotsh/alia/internal/router"
-	"github.com/aliadotsh/alia/internal/server"
 	gsrpc "github.com/centrifuge/go-substrate-rpc-client/v4"
 	"github.com/centrifuge/go-substrate-rpc-client/v4/config"
+	"github.com/fungiedotsh/fungie/internal/datastore"
+	"github.com/fungiedotsh/fungie/internal/graph"
+	"github.com/fungiedotsh/fungie/internal/router"
+	"github.com/fungiedotsh/fungie/internal/server"
 	"github.com/labstack/echo/v4"
 	"github.com/spf13/viper"
 )

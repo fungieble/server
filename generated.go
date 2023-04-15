@@ -15,7 +15,7 @@ import (
 
 	"github.com/99designs/gqlgen/graphql"
 	"github.com/99designs/gqlgen/graphql/introspection"
-	"github.com/aliadotsh/alia/internal/graph/models"
+	"github.com/fungiedotsh/fungie/internal/graph/models"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
 )
@@ -565,7 +565,7 @@ func (ec *executionContext) _Mutation_createMessage(ctx context.Context, field g
 	}
 	res := resTmp.(*models.Message)
 	fc.Result = res
-	return ec.marshalNMessage2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, field.Selections, res)
+	return ec.marshalNMessage2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createMessage(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -736,7 +736,7 @@ func (ec *executionContext) _Query_me(ctx context.Context, field graphql.Collect
 	}
 	res := resTmp.(*models.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_me(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -789,7 +789,7 @@ func (ec *executionContext) _Query_user(ctx context.Context, field graphql.Colle
 	}
 	res := resTmp.(*models.User)
 	fc.Result = res
-	return ec.marshalOUser2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐUser(ctx, field.Selections, res)
+	return ec.marshalOUser2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_user(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -853,7 +853,7 @@ func (ec *executionContext) _Query_messages(ctx context.Context, field graphql.C
 	}
 	res := resTmp.([]*models.Message)
 	fc.Result = res
-	return ec.marshalOMessage2ᚕᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, field.Selections, res)
+	return ec.marshalOMessage2ᚕᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_messages(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1040,7 +1040,7 @@ func (ec *executionContext) _Subscription_messageCreated(ctx context.Context, fi
 				w.Write([]byte{'{'})
 				graphql.MarshalString(field.Alias).MarshalGQL(w)
 				w.Write([]byte{':'})
-				ec.marshalNMessage2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, field.Selections, res).MarshalGQL(w)
+				ec.marshalNMessage2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, field.Selections, res).MarshalGQL(w)
 				w.Write([]byte{'}'})
 			})
 		case <-ctx.Done():
@@ -3690,11 +3690,11 @@ func (ec *executionContext) marshalNID2string(ctx context.Context, sel ast.Selec
 	return res
 }
 
-func (ec *executionContext) marshalNMessage2githubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v models.Message) graphql.Marshaler {
+func (ec *executionContext) marshalNMessage2githubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v models.Message) graphql.Marshaler {
 	return ec._Message(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNMessage2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v *models.Message) graphql.Marshaler {
+func (ec *executionContext) marshalNMessage2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v *models.Message) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -3719,11 +3719,11 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNUser2githubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v models.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2githubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v models.User) graphql.Marshaler {
 	return ec._User(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v *models.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v *models.User) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4012,7 +4012,7 @@ func (ec *executionContext) marshalOBoolean2ᚖbool(ctx context.Context, sel ast
 	return res
 }
 
-func (ec *executionContext) marshalOMessage2ᚕᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v []*models.Message) graphql.Marshaler {
+func (ec *executionContext) marshalOMessage2ᚕᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v []*models.Message) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -4039,7 +4039,7 @@ func (ec *executionContext) marshalOMessage2ᚕᚖgithubᚗcomᚋaliadotshᚋali
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalOMessage2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, sel, v[i])
+			ret[i] = ec.marshalOMessage2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4053,7 +4053,7 @@ func (ec *executionContext) marshalOMessage2ᚕᚖgithubᚗcomᚋaliadotshᚋali
 	return ret
 }
 
-func (ec *executionContext) marshalOMessage2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v *models.Message) graphql.Marshaler {
+func (ec *executionContext) marshalOMessage2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐMessage(ctx context.Context, sel ast.SelectionSet, v *models.Message) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -4076,7 +4076,7 @@ func (ec *executionContext) marshalOString2ᚖstring(ctx context.Context, sel as
 	return res
 }
 
-func (ec *executionContext) marshalOUser2ᚖgithubᚗcomᚋaliadotshᚋaliaᚋinternalᚋgraphᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v *models.User) graphql.Marshaler {
+func (ec *executionContext) marshalOUser2ᚖgithubᚗcomᚋfungiedotshᚋfungieᚋinternalᚋgraphᚋmodelsᚐUser(ctx context.Context, sel ast.SelectionSet, v *models.User) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}

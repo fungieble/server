@@ -1,11 +1,10 @@
-module github.com/aliadotsh/alia
+module github.com/fungiedotsh/fungie
 
 go 1.17
 
 require (
 	github.com/99designs/gqlgen v0.17.20
 	github.com/centrifuge/go-substrate-rpc-client/v4 v4.0.12
-	github.com/davecgh/go-spew v1.1.1
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/google/uuid v1.2.0
 	github.com/gorilla/websocket v1.5.0

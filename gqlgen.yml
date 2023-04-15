@@ -43,7 +43,7 @@ resolver:
 # gqlgen will search for any type names in the schema in these go packages
 # if they match it will use them, otherwise it will generate them.
 autobind:
-  - github.com/aliadotsh/alia/internal/graph/models
+  - github.com/fungiedotsh/fungie/internal/graph/models
 
 # This section declares type mapping between the GraphQL and go type systems
 #
@@ -53,7 +53,7 @@ autobind:
 models:
   User:
     model:
-      - github.com/aliadotsh/alia/internal/graph/models.User
+      - github.com/fungiedotsh/fungie/internal/graph/models.User
   ID:
     model:
       - github.com/99designs/gqlgen/graphql.ID
@@ -77,7 +77,7 @@ models:
   SortDirection:
     model:
       - github.com/web-ridge/utils-go/boilergql/v3.SortDirection
-  Alia:
+  Fungie:
     fields:
       user:
         resolver: true

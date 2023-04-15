@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/aliadotsh/alia/internal/graph/generated"
-	"github.com/aliadotsh/alia/internal/graph/models"
+	"github.com/fungiedotsh/fungie/internal/graph/generated"
+	"github.com/fungiedotsh/fungie/internal/graph/models"
 	"github.com/go-redis/redis"
 	"github.com/google/uuid"
 )
@@ -119,9 +119,15 @@ type mutationResolver struct{ *Resolver }
 type queryResolver struct{ *Resolver }
 type subscriptionResolver struct{ *Resolver }
 
+// !!! WARNING !!!
+// The code below was going to be deleted when updating resolvers. It has been copied here so you have
+// one last chance to move it out of harms way if you want. There are two reasons this happens:
+//   - When renaming or deleting a resolver the old code will be put in here. You can safely delete
+//     it when you're done.
+//   - You have helper methods in this file. Move them out to keep these resolver files clean.
 var user = &models.User{
 	ID:          "d9070b51-d3b9-45eb-9c5f-5ec6187c5c1b",
-	Email:       "teddy@alia.sh",
+	Email:       "teddy@fungie.sh",
 	FirstName:   "Theodore",
 	LastName:    "Verhoeff",
 	Username:    "teddy",
